@@ -332,6 +332,8 @@ h2{
 li{
     text-decoration: whitesmoke;
     list-style: none;
+    display: flex;
+    flex-direction: column;
 
     a{  
         text-decoration: none;
@@ -380,30 +382,30 @@ h6{
     margin-left: 60px;
 }
 .B1 {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(7, 0, 98);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* animation: pulse 1.5s infinite; */
+  margin-left: 60px;
+  margin-bottom: 30px;
 
     a{  
       text-decoration: none;
       color: white;
   }
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: rgb(7, 0, 98);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    animation: pulse 1.5s infinite;
-    margin-left: 60px;
-    margin-bottom: 30px;
 }
-@keyframes pulse{
+/* @keyframes pulse{
   0%,100%{
     transform: scale(1);
   }
   50%{
     transform: scale(1.1);
   }
-}
+} */
 
 
 
@@ -654,7 +656,8 @@ ul{
   background-color: var(--first-color);
   color: var(--first-color-lighten);
   padding: 15px;
-  border-radius: 12px;
+  width: 140px;
+  border-radius: .25rem;
   transition: .3s;
 }
 
