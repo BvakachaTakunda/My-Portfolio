@@ -661,7 +661,6 @@ ul{
   transition: .3s;
 }
 
-
 .contact__container {
   row-gap: 22px;
 }
@@ -705,7 +704,6 @@ ul{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 50px;
-
 }
 
 .contact__input, .contact__button {
@@ -723,18 +721,30 @@ ul{
   margin-bottom: var(--mb-1);
 }
 
-
 .contact__button {
   cursor: pointer;
   border: none;
 }
-
 
 @media screen and (min-width: 576px) {
   .contact__form {
     width: 450px;
     justify-self: center;
   }
+}
+
+.message {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.message.success {
+  color: green;
+}
+
+.message.error {
+  color: red;
 }
 
 
