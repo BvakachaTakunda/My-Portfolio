@@ -21,7 +21,7 @@
 
                     <a href="./about.html">about me</a>
 
-                    <a  href="./skills.html">Skills</a>
+                    <!-- <a  href="./skills.html">Skills</a> -->
 
                     <a  href="./projects.html">Projects</a>
 
@@ -35,31 +35,18 @@
 
 
 
-        <!--    Made by Erik Terwan    -->
-<!--   24th of November 2015   -->
-<!--        MIT License        -->
+        
 <nav class="navigation">
   <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
+    
     <input type="checkbox" />
     
-    <!--
-    Some spans to act as a hamburger.
     
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
     <span></span>
     <span></span>
     <span></span>
     
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
+    
     <ul id="menu">
       <li class="navv">
         <div >
@@ -70,7 +57,7 @@
 
               <a href="./about.html">about me</a>
 
-              <a  href="./skills.html">Skills</a>
+              <!-- <a  href="./skills.html">Skills</a> -->
 
               <a  href="./projects.html">Projects</a>
 
@@ -119,14 +106,14 @@
                           </div>
                           <form id="contactForm" class="contact__form">
                               <div class="contact__inputs">
-                                  <input type="text" name="name" placeholder="Name" class="contact__input" required>
-                                  <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                                  <input type="text" name="Name" placeholder="Name" class="contact__input" required>
+                                  <input type="email" name="Email" placeholder="Email" class="contact__input" required>
                               </div>
                               <div class="contact__inputs">
-                                  <input type="text" name="project" placeholder="Project" class="contact__input" required>
-                                  <input type="number" name="number" placeholder="Number" class="contact__input" required>
+                                  <input type="text" name="Project" placeholder="Project" class="contact__input" required>
+                                  <input type="number" name="Number" placeholder="Number" class="contact__input" required>
                               </div>
-                              <textarea name="message" cols="0" rows="7" placeholder="Message" class="contact__input" required></textarea>
+                              <textarea name="Message" cols="0" rows="7" placeholder="Message" class="contact__input" required></textarea>
                               <input type="submit" value="Send Message" class="button contact__button">
                               <div id="formMessage" class="message"></div>
                           </form>
@@ -140,7 +127,7 @@
 
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
+      event.preventDefault(); 
   
       const form = event.target;
       const formData = new FormData(form);
@@ -154,24 +141,24 @@
       })
       .then(response => {
           if (response.ok) {
-              return response.json(); // Parse the JSON response
+              return response.json(); 
           } else {
               throw new Error('Network response was not ok.');
           }
       })
       .then(data => {
-          // Check if data contains success information
+          
           document.getElementById('formMessage').textContent = 'Message sent successfully!';
           document.getElementById('formMessage').className = 'message success';
-          form.reset(); // Clear the form fields
+          form.reset(); 
   
-          // Hide the message after 3 seconds
+          
           setTimeout(() => {
               document.getElementById('formMessage').textContent = '';
           }, 3000);
       })
       .catch(error => {
-          // Display error message
+          
           document.getElementById('formMessage').textContent = 'There was an error sending your message.';
           document.getElementById('formMessage').className = 'message error';
       });
